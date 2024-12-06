@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareerCrafters</title>
+    <title>CareerCrafters - Hem</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo">CareerCrafters</div>
+            <a href="index.html" class="logo-link">
+                <img src="../img/logo.png" alt="CareerCrafters logo" class="logo">
+            </a>
             <nav>
                 <ul class="nav-list">
-                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="index.html" class="active">Hem</a></li>
                     <li><a href="annonser.html">Jobbannonser</a></li>
                     <li><a href="radgivning.html">Karriärrådgivning</a></li>
                     <li><a href="foretagsprofiler.html">Företagsprofiler</a></li>
@@ -23,31 +24,53 @@
             </nav>
         </div>
     </header>
+
     <main class="hero">
         <h2>Välkommen till CareerCrafters</h2>
-        <p>Hitta ditt drömjobb, få karriärrådgivning och utforska arbetsgivare.</p>
-        <a href="annonser.html" class="btn">Utforska Jobb</a>
+        <p>Utforska jobbannonser, karriärrådgivning och företagsprofiler på en plats.</p>
+        <a href="#" class="btn">Läs mer</a>
     </main>
+
+    <!-- Jobbannonser Sektion -->
     <section class="job-list">
-        <h3>Senaste Jobb</h3>
+        <h3>Senaste Jobbannonser</h3>
         <div class="grid">
             <div class="job-card">
                 <h4>Frontend Developer</h4>
-                <p>Company: TechCorp</p>
-                <p>Location: Stockholm</p>
+                <p>Plats: Stockholm</p>
+                <p>Företag: CodeCraft AB</p>
+                <p>Beskrivning: Vi söker en erfaren frontend-utvecklare...</p>
             </div>
             <div class="job-card">
-                <h4>UX Designer</h4>
-                <p>Company: Designify</p>
-                <p>Location: Göteborg</p>
-            </div>
-            <div class="job-card">
-                <h4>Backend Engineer</h4>
-                <p>Company: CodeBase</p>
-                <p>Location: Malmö</p>
+                <h4>HR Specialist</h4>
+                <p>Plats: Göteborg</p>
+                <p>Företag: Bright Solutions</p>
+                <p>Beskrivning: Är du en skicklig HR-specialist...</p>
             </div>
         </div>
+        <a href="annonser.html" class="btn">Visa alla jobb</a>
     </section>
+
+    <!-- Företagsprofiler Sektion -->
+    <section class="company-list">
+        <h3>Utvalda Företagsprofiler</h3>
+        <div class="grid">
+            <div class="job-card">
+                <h4>CodeCraft AB</h4>
+                <p>Bransch: IT & Utveckling</p>
+                <p>Plats: Stockholm</p>
+                <p>Beskrivning: Ledande företag inom mjukvaruutveckling...</p>
+            </div>
+            <div class="job-card">
+                <h4>Bright Solutions</h4>
+                <p>Bransch: Konsultverksamhet</p>
+                <p>Plats: Göteborg</p>
+                <p>Beskrivning: Konsulter med fokus på hållbara lösningar...</p>
+            </div>
+        </div>
+        <a href="foretagsprofiler.html" class="btn">Visa alla företag</a>
+    </section>
+
     <footer class="footer">
         <p>&copy; 2024 CareerCrafters</p>
     </footer>
