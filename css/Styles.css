@@ -35,16 +35,46 @@ body {
 .nav-list a {
     text-decoration: none;
     color: white;
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
 }
 
 .nav-list .active {
     text-decoration: underline;
 }
 
+.nav-list a:hover {
+    background-color: #27ae60;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transform: scale(1.05);
+    /* Slight grow effect */
+}
+
 /* Main Title */
 main h2 {
     text-align: center;
     margin: 1rem 0;
+}
+
+/* Hero Section (Spacing Adjustments) */
+.hero {
+    padding: 60px 20px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
 }
 
 /* Grid Section */
@@ -65,8 +95,19 @@ main h2 {
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
-    padding: 1rem;
+    padding: 0rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    /* Smooth transform for card hover */
+}
+
+.job-list {
+    padding: 2rem;
+}
+
+.job-card:hover {
+    transform: scale(1.05);
+    /* Slight grow effect on hover */
 }
 
 .job-card h4 {
@@ -78,20 +119,14 @@ main h2 {
 }
 
 .company-image {
-    width: 100%;
-    /* Säkerställ att bilden fyller kortets bredd */
-    max-width: 250px;
-    /* Begränsa maximal bredd */
-    height: auto;
-    /* Bevara bildens proportioner */
+    width: calc(100% - 20px);
+    height: 200px;
     object-fit: cover;
-    /* Klipp bort delar av bilden om nödvändigt för att passa */
     margin: 0 auto;
-    /* Centrera bilden om den är mindre än kortets bredd */
     display: block;
-    /* Gör bilden blocknivå för centrering */
     border-bottom: 1px solid #ddd;
-    /* Separera visuellt från texten */
+    border-radius: 8px;
+    padding: 10px;
 }
 
 /* Button */
@@ -103,10 +138,14 @@ main h2 {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Smooth transition for button hover */
 }
 
 .btn:hover {
     background-color: #27ae60;
+    transform: scale(1.05);
+    /* Slight grow effect */
 }
 
 /* Footer */
@@ -118,13 +157,48 @@ main h2 {
     margin-top: 2rem;
 }
 
+/* Logo Image */
 .logo {
     width: 100px;
-    /* Sätt en fast bredd */
     height: auto;
-    /* Bevara proportioner */
     max-width: 100%;
-    /* Anpassa sig efter behållarens storlek */
     display: inline-block;
-    /* Behåll loggans linjehöjd */
+}
+
+/* Additional Styling for Missing Elements */
+
+/* Navigation */
+.nav-list li {
+    list-style: none;
+}
+
+/* Main Layout */
+main {
+    padding: 0 20px;
+    /* Add side padding to keep content away from the edge */
+}
+
+/* Adjust grid for responsiveness */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        /* Stack the job cards on smaller screens */
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .job-card h4 {
+        font-size: 1rem;
+    }
+
+    .job-card p {
+        font-size: 0.9rem;
+    }
 }
