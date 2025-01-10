@@ -202,3 +202,16 @@ main {
         font-size: 0.9rem;
     }
 }
+/* Style för advice-banner */
+.advice-banner {
+    width: 100%;
+    /* Gör att bilden fyller bredden på föräldraelementet */
+    height: 500px;
+    /* Justera höjden som du önskar */
+    object-fit: cover;
+    /* Croppa bilden för att fylla hela container, bibehåller aspect ratio */
+    object-position: center;
+    /* Placera bilden i mitten */
+    display: block;
+    /* För att säkerställa att bilden inte får extra mellanrum */
+}
